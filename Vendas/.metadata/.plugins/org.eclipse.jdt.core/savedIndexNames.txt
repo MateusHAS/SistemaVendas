@@ -1,0 +1,1 @@
+INDEX VERSION 1.131+D:\UEM\ISS\2019\Teste\Arquivos Java Vendas\Sistema Vendas Completo\Workspace\Vendas_teste\.metadata\.plugins\org.eclipse.jdt.core
