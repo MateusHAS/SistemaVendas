@@ -13,7 +13,7 @@ public class HibernateUtil {
 
     private static SessionFactory buildSessionFactory() {
         try {
-            // Cria uma conexão a partir do hibernate.cfg.xml
+            // Cria uma conexao a partir do hibernate.cfg.xml
            
         	Configuration configuration = new Configuration();
         	configuration.configure();
@@ -32,7 +32,7 @@ public class HibernateUtil {
         }
         catch (Throwable ex) {
             // Mensagem de erro ao conectar
-            System.err.println("Erro na conexão." + ex);
+            System.err.println("Erro na conexao." + ex);
             throw new ExceptionInInitializerError(ex);
         }
     }

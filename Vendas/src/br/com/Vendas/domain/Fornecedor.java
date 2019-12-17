@@ -25,7 +25,7 @@ public class Fornecedor {
 @Column(name="for_codigo")
 private Long codigo;
 
-@NotEmpty(message = "Insira a Descrição")
+@NotEmpty(message = "Insira a Descriï¿½ï¿½o")
 @Column(name="for_descricao", length=50, nullable=false )
 private String descricao;
 

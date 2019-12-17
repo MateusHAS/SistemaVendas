@@ -5,9 +5,13 @@
 	xmlns:f="http://java.sun.com/jsf/core"
 	xmlns:p="http://primefaces.org/ui"
 	xmlns:ui="http://java.sun.com/jsf/facelets">
-	
-<ui:insert name="metadata" />	
-	
+
+<ui:insert name="metadata" />
+
+<f:metadata>
+	<f:viewParam name="autentica" action="#{MBAutenticador.doEfetuarLogin}" />
+</f:metadata>
+
 <h:head>
 
 	<h:outputStylesheet library="css" name="style.css" />
@@ -18,7 +22,7 @@
 </h:head>
 <h:body>
 
-<p:growl id="msgGlobal"/>
+	<p:growl id="msgGlobal" />
 
 	<p:layout fullPage="true">
 
@@ -36,18 +40,22 @@
 				<p:panelMenu>
 
 					<p:submenu label="Arquivo">
-						<p:menuitem value="Principal"  outcome="/pages/principal.xhtml" />
-						<p:menuitem value="Sair" />
+						<p:menuitem value="Principal" outcome="/pages/principal.xhtml" />
+						<p:menuitem value="Sair" outcome="/templates/login.xhtml" />
 					</p:submenu>
 
 					<p:submenu label="Cadastros">
-						<p:menuitem value="Produtos" outcome="/pages/produtoPesquisa.xhtml" />
-						<p:menuitem value="Fornecedores" outcome="/pages/fornecedorPesquisa.xhtml"/>
-						<p:menuitem value="Funcionários" outcome="/pages/funcionarioPesquisa.xhtml" />
+						<p:menuitem value="Produtos"
+							outcome="/pages/produtoPesquisa.xhtml" />
+						<p:menuitem value="Fornecedores"
+							outcome="/pages/fornecedorPesquisa.xhtml" />
+						<p:menuitem value="Funcionários"
+							outcome="/pages/funcionarioPesquisa.xhtml" />
 					</p:submenu>
 
-					<p:submenu label="Vendas"  >
-					<p:menuitem value="Nova Venda" outcome="/pages/vendaCadastro.xhtml" />
+					<p:submenu label="Vendas">
+						<p:menuitem value="Nova Venda"
+							outcome="/pages/vendaCadastro.xhtml" />
 					</p:submenu>
 
 					<p:submenu label="Ajuda">
@@ -55,7 +63,7 @@
 
 				</p:panelMenu>
 			</h:form>
-			
+
 
 		</p:layoutUnit>
 

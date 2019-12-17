@@ -34,17 +34,17 @@ public class Produto {
 @Column(name="pro_codigo")
 private Long codigo;
 
-@NotEmpty(message = "Insira a Descrição")
+@NotEmpty(message = "Insira a Descriï¿½ï¿½o")
 @Column(name="pro_descricao", length=50, nullable=false )
 private String descricao;
 
-@NotNull(message = "Insira o Preço")
-@DecimalMin(value = "0.00", message = "O valor não pode ser menor que 0")
+@NotNull(message = "Insira o Preï¿½o")
+@DecimalMin(value = "0.00", message = "O valor nï¿½o pode ser menor que 0")
 @Column(name="pro_preco", nullable=false, scale=2, precision=7 )
 private BigDecimal preco;
 
 @NotNull(message = "Insira a Quantidade")
-@Min(value = 0 , message = "O valor não pode ser menor que 0")
+@Min(value = 0 , message = "O valor nï¿½o pode ser menor que 0")
 @Column(name="pro_quantidade",  nullable=false )
 private Integer quantidade;
 

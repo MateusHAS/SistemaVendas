@@ -35,6 +35,11 @@ public class Funcionario {
 	@CPF(message = "CPF Incorreto")
 	@Column(name = "fun_cpf", length = 14, nullable = false, unique = true)
 	private String cpf;
+	
+	@NotEmpty(message = "Insira o E-mail")
+	@Size(message = "Insira um e-mail valido")
+	@Column(name = "fun_email", length = 50, nullable = false)
+	private String email;
 
 	@NotEmpty(message = "Insira a Senha")
 	@Size(min = 5, max = 8, message = "Sua senha deve conter de 5 a 8 caracteres")
@@ -75,6 +80,14 @@ public class Funcionario {
 
 	public void setSenha(String senha) {
 		this.senha = senha;
+	}
+
+	public String getEmail() {
+		return email;
+	}
+
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 	public String getFuncao() {
