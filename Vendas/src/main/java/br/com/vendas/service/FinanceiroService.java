@@ -10,6 +10,6 @@ import javax.ws.rs.Path;
 public class FinanceiroService {
 	@GET
 	public String exibir(){
-		return "Cursos de Hugo Vasconcelos";
+		return "Teste";
 	}
 }

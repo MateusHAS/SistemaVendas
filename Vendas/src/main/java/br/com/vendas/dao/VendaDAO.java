@@ -7,6 +7,7 @@ import org.hibernate.Session;
 import org.hibernate.Transaction;
 
 import br.com.vendas.domain.ItemVenda;
+import br.com.vendas.domain.Produto;
 import br.com.vendas.domain.Venda;
 import br.com.vendas.util.HibernateUtil;
 
@@ -25,6 +26,23 @@ public class VendaDAO extends GenericDAO<Venda> {
 				itemVenda.setVenda(venda);
 				
 				sessao.save(itemVenda);
+				
+				
+				
+				Produto produto = itemVenda.getProduto();
+				
+				int qtde = produto.getQuantidade() - itemVenda.getQuantidade();
+				
+				if(qtde >= 0){
+				
+				produto.setQuantidade(new Short((qtde) + ""));
+				
+				sessao.update(produto);
+				
+			}else{
+				throw new RuntimeException("Quantidade insuficiente em estoque");
+			}
+				
 			}
 			
 			transacao.commit();

@@ -184,4 +184,47 @@ public class VendaBean implements Serializable {
 			erro.printStackTrace();
 		}
 	}
+	
+	/*
+	 * public void buscar(){ try{ VendaDAO vendadao = new VendaDAO(); Venda
+	 * resultado = vendadao.buscar(venda.getCodigo());
+	 * 
+	 * if(resultado == null){
+	 * Messages.addGlobalWarn("Não existe este Produto Cadastrado"); } else{ venda =
+	 * resultado; }
+	 * 
+	 * }catch (RuntimeException erro) {
+	 * Messages.addFlashGlobalError("Ocorreu um erro ao tentar buscar o Produto");
+	 * erro.printStackTrace(); }
+	 * 
+	 * }
+	 * 
+	 * public void imprimir(){ try { DataTable tabela = (DataTable)
+	 * Faces.getViewRoot().findComponent
+	 * 
+	 * ("formListagem:tabela"); Map<String, Object> filtros = tabela.getFilters();
+	 * 
+	 * String vendaDescricao = (String) filtros.get("pessoa.nome"); String
+	 * funDescricao = (String) filtros.get("funcionario.nome");
+	 * 
+	 * String caminho = Faces.getRealPath("/reports/produto.jasper");
+	 * 
+	 * Map<String, Object> parametros = new HashMap<>(); if (vendaDescricao == null)
+	 * { parametros.put("PRODUTO_DESCRICAO", "%%"); } else {
+	 * parametros.put("PRODUTO_DESCRICAO", "%" + vendaDescricao + "%"); } if
+	 * (funDescricao == null) { parametros.put("FORNECEDOR_DESCRICAO", "%%"); } else
+	 * { parametros.put("FORNECEDOR_DESCRICAO", "%" + funDescricao + "%"); }
+	 * 
+	 * Connection conexao = HibernateUtil.getConexao();
+	 * 
+	 * JasperPrint relatorio = JasperFillManager.fillReport(caminho,
+	 * 
+	 * parametros, conexao);
+	 * 
+	 * JasperPrintManager.printReport(relatorio, true);
+	 * 
+	 * } catch (JRException erro) {
+	 * Messages.addGlobalError("Ocorreu um erro ao tentar gerar o relatório");
+	 * erro.printStackTrace(); } }
+	 */
 }

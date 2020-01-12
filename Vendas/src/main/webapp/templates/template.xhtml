@@ -14,7 +14,7 @@
 	<h:outputScript library="js" name="scripts.js" />
 
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
-	<title>Sistema Financeiro</title>
+	<title>Sistema de Vendas</title>
 </h:head>
 <h:body>
 
@@ -33,13 +33,14 @@
 
 					<p:submenu label="Arquivo">
 						<p:menuitem value="Principal"  outcome="/pages/principal.xhtml" />
-						<p:menuitem value="Sair" />
+						<p:menuitem value="Sair" update=":mensagem"
+				actionListener="#{autenticacaoBean.efetuarLogout}"/>
 					</p:submenu>
 
-					<p:submenu label="Cadastros">
+					<p:submenu label="Cadastros" rendered="#{autenticacaoBean.temPermissoes(['A', 'G'])}">
 						<p:menuitem value="Produtos" outcome="/pages/produto.xhtml" />
 						<p:menuitem value="Fornecedores" outcome="/pages/fornecedor.xhtml"/>
-						<p:menuitem value="Funcionários"  />
+						<p:menuitem value="Funcionários" outcome="/pages/funcionario.xhtml" />
 						<p:menuitem value="Estados" outcome="/pages/estado.xhtml"/>
 						<p:menuitem value="Cidades" outcome="/pages/cidade.xhtml"/>
 						<p:menuitem value="Pessoas" outcome="/pages/pessoa.xhtml"/>
@@ -49,6 +50,11 @@
 
 					<p:submenu label="Vendas"  >
 					<p:menuitem value="Nova Venda" outcome="/pages/vendas.xhtml" />
+					<p:menuitem value="Devolução" outcome="/pages/devolucao.xhtml" />
+					</p:submenu>
+					
+					<p:submenu label="Consultas"  >
+					<p:menuitem value="Produtos" outcome="/pages/produtosconsulta.xhtml" />
 					</p:submenu>
 
 					<p:submenu label="Ajuda">

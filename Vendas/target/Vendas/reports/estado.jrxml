@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.2.2.final using JasperReports Library version 6.2.2  -->
+<!-- 2016-06-24T15:36:09 -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="estado" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="165a0001-6356-4581-8d29-afda0a257c60">
+	<property name="com.jaspersoft.studio.data.sql.tables" value="ZmluYW5jZWlyby5lc3RhZG8gQVMgLDEzNyw1MywxZWY5ZTg5Ny1jMzBlLTQ4NjMtOTI0ZC05Mzdh&#xA;Y2Q5NDcyZjk7"/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Financeiro Data Adapter"/>
+	<queryString>
+		<![CDATA[SELECT financeiro.estado.nome,
+	financeiro.estado.sigla
+FROM financeiro.estado
+ORDER BY financeiro.estado.nome ASC]]>
+	</queryString>
+	<field name="nome" class="java.lang.String"/>
+	<field name="sigla" class="java.lang.String"/>
+	<title>
+		<band height="123" splitType="Stretch">
+			<image hAlign="Center" vAlign="Middle">
+				<reportElement x="0" y="0" width="550" height="110" uuid="ca61d7a0-2abf-4f1a-94ba-cfbcd55034a9"/>
+				<imageExpression><![CDATA["src/main/webapp/resources/images/bannerqcursos.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="71" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="7" width="540" height="30" forecolor="#A3A3A3" uuid="769f5060-6113-4367-9b53-40405ec550f4"/>
+				<textElement textAlignment="Center">
+					<font size="20" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Estados]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="52" splitType="Stretch">
+			<staticText>
+				<reportElement x="160" y="10" width="100" height="30" uuid="6732516b-ac45-4580-b04e-3ed0922b386f"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="280" y="10" width="100" height="30" uuid="0269098a-b213-46a0-95f2-8e73679da221"/>
+				<textElement>
+					<font size="12" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sigla]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="27" splitType="Stretch">
+			<textField>
+				<reportElement x="160" y="4" width="100" height="16" uuid="9ae5fbd6-4b6e-40de-a704-01dd3ac77f87"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#A6A6A6"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{nome}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="280" y="0" width="100" height="20" uuid="8e486b06-1031-4304-807d-7b37a6d32d4c"/>
+				<box>
+					<bottomPen lineWidth="0.5" lineColor="#B3B1B1"/>
+				</box>
+				<textElement>
+					<font size="10"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{sigla}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="21" width="540" height="30" uuid="4eeaff6b-2943-4919-8fe5-044870c6999a"/>
+				<box>
+					<topPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Rua Boa Vista 250 - Belo Horizonte - 30215-899]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>
