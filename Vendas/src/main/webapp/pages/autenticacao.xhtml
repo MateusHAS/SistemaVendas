@@ -19,13 +19,12 @@
 <h:body>
 
 <p:growl id="mensagem"/>
-
-
-
+ 
 
 <p:dialog header="Autenticação" closable="false" draggable="false"
 		resizable="false" global="true" visible="true">
 		<h:form>
+		<h:graphicImage library="images" name="logo.jpg" />
 			<h:panelGrid columns="2">
 				<p:outputLabel for="cpf" value="CPF:" />
 				<p:inputMask id="cpf" mask="999.999.999-99" size="20"

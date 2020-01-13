@@ -3,16 +3,21 @@ package br.com.vendas.Bean;
 
 import java.io.Serializable;
 import java.math.BigDecimal;
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.PostConstruct;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
 import javax.faces.event.ActionEvent;
 
+import org.omnifaces.util.Faces;
 import org.omnifaces.util.Messages;
+import org.primefaces.component.datatable.DataTable;
 
 import br.com.vendas.dao.ClienteDAO;
 import br.com.vendas.dao.FuncionarioDAO;
@@ -23,11 +28,16 @@ import br.com.vendas.domain.Funcionario;
 import br.com.vendas.domain.ItemVenda;
 import br.com.vendas.domain.Produto;
 import br.com.vendas.domain.Venda;
+import br.com.vendas.util.HibernateUtil;
+import net.sf.jasperreports.engine.JRException;
+import net.sf.jasperreports.engine.JasperFillManager;
+import net.sf.jasperreports.engine.JasperPrint;
+import net.sf.jasperreports.engine.JasperPrintManager;
 
 @SuppressWarnings("serial")
 @ManagedBean
 @ViewScoped
-public class VendaBean implements Serializable {
+public class VendaBean implements Serializable, StrategyBean {
 	private Venda venda;
 
 	private List<Produto> produtos;
@@ -185,46 +195,50 @@ public class VendaBean implements Serializable {
 		}
 	}
 	
-	/*
-	 * public void buscar(){ try{ VendaDAO vendadao = new VendaDAO(); Venda
-	 * resultado = vendadao.buscar(venda.getCodigo());
-	 * 
-	 * if(resultado == null){
-	 * Messages.addGlobalWarn("Não existe este Produto Cadastrado"); } else{ venda =
-	 * resultado; }
-	 * 
-	 * }catch (RuntimeException erro) {
-	 * Messages.addFlashGlobalError("Ocorreu um erro ao tentar buscar o Produto");
-	 * erro.printStackTrace(); }
-	 * 
-	 * }
-	 * 
-	 * public void imprimir(){ try { DataTable tabela = (DataTable)
-	 * Faces.getViewRoot().findComponent
-	 * 
-	 * ("formListagem:tabela"); Map<String, Object> filtros = tabela.getFilters();
-	 * 
-	 * String vendaDescricao = (String) filtros.get("pessoa.nome"); String
-	 * funDescricao = (String) filtros.get("funcionario.nome");
-	 * 
-	 * String caminho = Faces.getRealPath("/reports/produto.jasper");
-	 * 
-	 * Map<String, Object> parametros = new HashMap<>(); if (vendaDescricao == null)
-	 * { parametros.put("PRODUTO_DESCRICAO", "%%"); } else {
-	 * parametros.put("PRODUTO_DESCRICAO", "%" + vendaDescricao + "%"); } if
-	 * (funDescricao == null) { parametros.put("FORNECEDOR_DESCRICAO", "%%"); } else
-	 * { parametros.put("FORNECEDOR_DESCRICAO", "%" + funDescricao + "%"); }
-	 * 
-	 * Connection conexao = HibernateUtil.getConexao();
-	 * 
-	 * JasperPrint relatorio = JasperFillManager.fillReport(caminho,
-	 * 
-	 * parametros, conexao);
-	 * 
-	 * JasperPrintManager.printReport(relatorio, true);
-	 * 
-	 * } catch (JRException erro) {
-	 * Messages.addGlobalError("Ocorreu um erro ao tentar gerar o relatório");
-	 * erro.printStackTrace(); } }
-	 */
+	
+	  public void buscar(){ try{ VendaDAO vendadao = new VendaDAO(); Venda
+	  resultado = vendadao.buscar(venda.getCodigo());
+	  
+	  if(resultado == null){
+	  Messages.addGlobalWarn("Não existe este Produto Cadastrado"); } else{ venda =
+	  resultado; }
+	  
+	  }catch (RuntimeException erro) {
+	  Messages.addFlashGlobalError("Ocorreu um erro ao tentar buscar o Produto");
+	  erro.printStackTrace(); }
+	  
+	  }
+	  
+	  public void imprimir(){
+			try {
+				DataTable tabela = (DataTable) Faces.getViewRoot().findComponent
+
+	("formListagem:tabela");
+				Map<String, Object> filtros = tabela.getFilters();
+
+				String proDescricao = (String) filtros.get("nome");
+
+				String caminho = Faces.getRealPath("/reports/produto.jasper");
+
+				Map<String, Object> parametros = new HashMap<>();
+				if (proDescricao == null) {
+					parametros.put("VENDAS_NOME", "%%");
+				} else {
+					parametros.put("VENDAS_NOME", "%" + proDescricao + "%");
+				}
+				
+				Connection conexao = HibernateUtil.getConexao();
+
+				JasperPrint relatorio = JasperFillManager.fillReport(caminho, 
+
+	parametros, conexao);
+
+				JasperPrintManager.printReport(relatorio, true);
+
+	} catch (JRException erro) {
+				Messages.addGlobalError("Ocorreu um erro ao tentar gerar o relatório");
+				erro.printStackTrace();
+			}
+		}
+	 
 }

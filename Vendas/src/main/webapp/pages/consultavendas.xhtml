@@ -33,27 +33,9 @@ obrigatório"
 			<h:panelGrid columns="2"  rendered="#{produtoPesquisaBean.exibir}">
 				<p:outputLabel value="Descrição:" />
 				<h:outputText value="#{produtoPesquisaBean.produto.descricao}" />
-				
-				<p:outputLabel value="Preço:" />
-				
-				<h:outputText value="#{produtoPesquisaBean.produto.preco}" >
-				<f:convertNumber locale="pt_BR" minFractionDigits="2" />
-				</h:outputText>
-				
-				<p:outputLabel value="Quantidade:" />
-				<h:outputText value="#{produtoPesquisaBean.produto.quantidade}" />
-				
-				<p:outputLabel value="Fornecedor:" />
-				<h:outputText value="#{produtoPesquisaBean.produto.fornecedor.descricao}" />
-				
-				<p:outputLabel value="Observações:" />
-				<h:inputTextarea rows="5" cols="50" value="#{produtoPesquisaBean.historico.observacoes}"/>
-			</h:panelGrid>
 			
-			<h:panelGrid columns="1" rendered="#{produtoPesquisaBean.exibir}">
-			<p:commandButton value="Salvar" actionListener="#{produtoPesquisaBean.salvar}" 
-			update="mensagem"
-			/>
+			<p:commandButton value="Imprimir" actionListener="#{produtoBean.imprimir}">
+					</p:commandButton>
 			
 			</h:panelGrid>
 			

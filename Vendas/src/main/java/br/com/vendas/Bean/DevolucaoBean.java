@@ -26,7 +26,7 @@ import br.com.vendas.domain.Produto;
 @SuppressWarnings("serial")
 @ManagedBean
 @ViewScoped
-public class DevolucaoBean implements Serializable{
+public class DevolucaoBean implements Serializable, StrategyBean{
 	
 	private Devolucao devolucao;
 
