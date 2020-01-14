@@ -1,7 +1,7 @@
 package br.com.vendas.dao;
 
 
-import br.com.vendas.domain.Produto;
+import br.com.vendas.model.Produto;
 
 public class ProdutoDAO extends GenericDAO<Produto> {
 

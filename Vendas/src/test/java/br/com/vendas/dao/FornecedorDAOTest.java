@@ -6,7 +6,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import br.com.vendas.dao.FornecedorDAO;
-import br.com.vendas.domain.Fornecedor;
+import br.com.vendas.model.Fornecedor;
 
 public class FornecedorDAOTest {
 	@Test

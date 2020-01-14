@@ -1,4 +1,4 @@
-package br.com.vendas.domain;
+package br.com.vendas.model;
 
 
 import javax.persistence.Column;

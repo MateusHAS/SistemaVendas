@@ -1,4 +1,4 @@
-package br.com.vendas.domain;
+package br.com.vendas.model;
 
 
 import java.math.BigDecimal;
@@ -13,7 +13,7 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-public class Venda extends GenericDomain {
+public class Devolucao extends GenericDomain {
 	@Column(nullable = false)
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date horario;

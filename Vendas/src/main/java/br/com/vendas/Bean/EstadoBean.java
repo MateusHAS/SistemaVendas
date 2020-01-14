@@ -11,7 +11,7 @@ import javax.faces.event.ActionEvent;
 import org.omnifaces.util.Messages;
 
 import br.com.vendas.dao.EstadoDAO;
-import br.com.vendas.domain.Estado;
+import br.com.vendas.model.Estado;
 
 
 

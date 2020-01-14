@@ -6,7 +6,7 @@ import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 import org.hibernate.criterion.Restrictions;
 
-import br.com.vendas.domain.Cidade;
+import br.com.vendas.model.Cidade;
 import br.com.vendas.util.HibernateUtil;
 
 public class CidadeDAO extends GenericDAO<Cidade> {

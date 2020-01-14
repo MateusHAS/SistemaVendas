@@ -6,7 +6,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 
-import br.com.vendas.domain.Cliente;
+import br.com.vendas.model.Cliente;
 import br.com.vendas.util.HibernateUtil;
 
 public class ClienteDAO extends GenericDAO<Cliente>{

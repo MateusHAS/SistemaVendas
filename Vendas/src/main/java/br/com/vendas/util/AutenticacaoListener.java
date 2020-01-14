@@ -7,7 +7,7 @@ import javax.faces.event.PhaseListener;
 import org.omnifaces.util.Faces;
 
 import br.com.vendas.Bean.AutenticacaoBean;
-import br.com.vendas.domain.Usuario;
+import br.com.vendas.model.Usuario;
 
 public class AutenticacaoListener implements PhaseListener{
 

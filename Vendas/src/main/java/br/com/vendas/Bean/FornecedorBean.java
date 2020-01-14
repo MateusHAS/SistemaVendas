@@ -11,7 +11,7 @@ import javax.faces.event.ActionEvent;
 import org.omnifaces.util.Messages;
 
 import br.com.vendas.dao.FornecedorDAO;
-import br.com.vendas.domain.Fornecedor;
+import br.com.vendas.model.Fornecedor;
 
 @SuppressWarnings("serial")
 @ManagedBean

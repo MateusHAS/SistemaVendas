@@ -7,8 +7,8 @@ import org.junit.Test;
 
 import br.com.vendas.dao.CidadeDAO;
 import br.com.vendas.dao.EstadoDAO;
-import br.com.vendas.domain.Cidade;
-import br.com.vendas.domain.Estado;
+import br.com.vendas.model.Cidade;
+import br.com.vendas.model.Estado;
 
 public class CidadeDAOTest {
 	

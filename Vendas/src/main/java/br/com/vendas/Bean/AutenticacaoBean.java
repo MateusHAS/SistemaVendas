@@ -11,8 +11,8 @@ import org.omnifaces.util.Faces;
 import org.omnifaces.util.Messages;
 
 import br.com.vendas.dao.UsuarioDAO;
-import br.com.vendas.domain.Pessoa;
-import br.com.vendas.domain.Usuario;
+import br.com.vendas.model.Pessoa;
+import br.com.vendas.model.Usuario;
 
 @ManagedBean
 @SessionScoped

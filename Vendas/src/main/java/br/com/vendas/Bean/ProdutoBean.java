@@ -24,8 +24,8 @@ import org.primefaces.model.UploadedFile;
 
 import br.com.vendas.dao.FornecedorDAO;
 import br.com.vendas.dao.ProdutoDAO;
-import br.com.vendas.domain.Fornecedor;
-import br.com.vendas.domain.Produto;
+import br.com.vendas.model.Fornecedor;
+import br.com.vendas.model.Produto;
 import br.com.vendas.util.HibernateUtil;
 import net.sf.jasperreports.engine.JRException;
 import net.sf.jasperreports.engine.JasperFillManager;

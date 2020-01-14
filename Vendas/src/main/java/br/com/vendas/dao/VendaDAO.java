@@ -6,9 +6,9 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import br.com.vendas.domain.ItemVenda;
-import br.com.vendas.domain.Produto;
-import br.com.vendas.domain.Venda;
+import br.com.vendas.model.ItemVenda;
+import br.com.vendas.model.Produto;
+import br.com.vendas.model.Venda;
 import br.com.vendas.util.HibernateUtil;
 
 public class VendaDAO extends GenericDAO<Venda> {

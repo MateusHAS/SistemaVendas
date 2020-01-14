@@ -1,4 +1,4 @@
-package br.com.vendas.domain;
+package br.com.vendas.model;
 
 
 import java.util.Date;
@@ -12,32 +12,32 @@ import javax.persistence.TemporalType;
 
 
 @Entity
-public class Funcionario extends GenericDomain {
-	@Column(length = 15, nullable = false)
-	private String carteiraTrabalho;
-	
+public class Cliente extends GenericDomain {
 	@Column(nullable = false)
 	@Temporal(TemporalType.DATE)
-	private Date dataAdmissao;
+	private Date dataCadastro;
+	
+	@Column(nullable = false)
+	private Boolean liberado;
 	
 	@OneToOne
 	@JoinColumn(nullable = false)
 	private Pessoa pessoa;
 
-	public String getCarteiraTrabalho() {
-		return carteiraTrabalho;
+	public Date getDataCadastro() {
+		return dataCadastro;
 	}
 
-	public void setCarteiraTrabalho(String carteiraTrabalho) {
-		this.carteiraTrabalho = carteiraTrabalho;
+	public void setDataCadastro(Date dataCadastro) {
+		this.dataCadastro = dataCadastro;
 	}
 
-	public Date getDataAdmissao() {
-		return dataAdmissao;
+	public Boolean getLiberado() {
+		return liberado;
 	}
 
-	public void setDataAdmissao(Date dataAdmissao) {
-		this.dataAdmissao = dataAdmissao;
+	public void setLiberado(Boolean liberado) {
+		this.liberado = liberado;
 	}
 
 	public Pessoa getPessoa() {

@@ -17,11 +17,11 @@ import br.com.vendas.dao.ClienteDAO;
 import br.com.vendas.dao.DevolucaoDAO;
 import br.com.vendas.dao.FuncionarioDAO;
 import br.com.vendas.dao.ProdutoDAO;
-import br.com.vendas.domain.Cliente;
-import br.com.vendas.domain.Devolucao;
-import br.com.vendas.domain.Funcionario;
-import br.com.vendas.domain.ItemDevolucao;
-import br.com.vendas.domain.Produto;
+import br.com.vendas.model.Cliente;
+import br.com.vendas.model.Devolucao;
+import br.com.vendas.model.Funcionario;
+import br.com.vendas.model.ItemDevolucao;
+import br.com.vendas.model.Produto;
 
 @SuppressWarnings("serial")
 @ManagedBean

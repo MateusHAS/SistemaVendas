@@ -13,8 +13,8 @@ import org.omnifaces.util.Messages;
 
 import br.com.vendas.dao.ClienteDAO;
 import br.com.vendas.dao.PessoaDAO;
-import br.com.vendas.domain.Cliente;
-import br.com.vendas.domain.Pessoa;
+import br.com.vendas.model.Cliente;
+import br.com.vendas.model.Pessoa;
 
 @SuppressWarnings("serial")
 @ManagedBean

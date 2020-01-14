@@ -15,9 +15,9 @@ import org.omnifaces.util.Messages;
 import br.com.vendas.dao.CidadeDAO;
 import br.com.vendas.dao.EstadoDAO;
 import br.com.vendas.dao.PessoaDAO;
-import br.com.vendas.domain.Cidade;
-import br.com.vendas.domain.Estado;
-import br.com.vendas.domain.Pessoa;
+import br.com.vendas.model.Cidade;
+import br.com.vendas.model.Estado;
+import br.com.vendas.model.Pessoa;
 
 @SuppressWarnings("serial")
 @ManagedBean

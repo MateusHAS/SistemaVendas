@@ -1,4 +1,4 @@
-package br.com.vendas.domain;
+package br.com.vendas.model;
 
 
 import java.math.BigDecimal;
@@ -10,7 +10,7 @@ import javax.persistence.ManyToOne;
 
 
 @Entity
-public class ItemDevolucao extends GenericDomain {
+public class ItemVenda extends GenericDomain {
 	@Column(nullable = false)
 	private Short quantidade;
 	
@@ -23,7 +23,7 @@ public class ItemDevolucao extends GenericDomain {
 	
 	@ManyToOne
 	@JoinColumn(nullable = false)
-	private Devolucao devolucao;
+	private Venda venda;
 
 	public Short getQuantidade() {
 		return quantidade;
@@ -49,12 +49,12 @@ public class ItemDevolucao extends GenericDomain {
 		this.produto = produto;
 	}
 
-	public Devolucao getDevolucao() {
-		return devolucao;
+	public Venda getVenda() {
+		return venda;
 	}
 	
-	public void setDevolucao(Devolucao devolucao) {
-		this.devolucao = devolucao;
+	public void setVenda(Venda venda) {
+		this.venda = venda;
 	}
 }
 

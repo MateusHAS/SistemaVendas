@@ -1,6 +1,6 @@
 package br.com.vendas.dao;
 
-import br.com.vendas.domain.Fornecedor;
+import br.com.vendas.model.Fornecedor;
 
 public class FornecedorDAO extends  GenericDAO<Fornecedor> {
 

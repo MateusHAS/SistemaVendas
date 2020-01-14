@@ -10,8 +10,8 @@ import org.omnifaces.util.Messages;
 
 import br.com.vendas.dao.HistoricoDAO;
 import br.com.vendas.dao.ProdutoDAO;
-import br.com.vendas.domain.Historico;
-import br.com.vendas.domain.Produto;
+import br.com.vendas.model.Historico;
+import br.com.vendas.model.Produto;
 
 
 @ManagedBean

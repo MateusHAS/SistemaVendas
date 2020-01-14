@@ -7,7 +7,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Order;
 
-import br.com.vendas.domain.Funcionario;
+import br.com.vendas.model.Funcionario;
 import br.com.vendas.util.HibernateUtil;
 
 public class FuncionarioDAO extends GenericDAO<Funcionario>{

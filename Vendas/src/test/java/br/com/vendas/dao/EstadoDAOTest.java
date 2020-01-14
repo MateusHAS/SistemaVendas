@@ -6,7 +6,7 @@ import org.junit.Ignore;
 import org.junit.Test;
 
 import br.com.vendas.dao.EstadoDAO;
-import br.com.vendas.domain.Estado;
+import br.com.vendas.model.Estado;
 
 public class EstadoDAOTest {
 	@Test

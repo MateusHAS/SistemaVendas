@@ -6,9 +6,9 @@ import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.Transaction;
 
-import br.com.vendas.domain.Devolucao;
-import br.com.vendas.domain.ItemDevolucao;
-import br.com.vendas.domain.Produto;
+import br.com.vendas.model.Devolucao;
+import br.com.vendas.model.ItemDevolucao;
+import br.com.vendas.model.Produto;
 import br.com.vendas.util.HibernateUtil;
 
 public class DevolucaoDAO extends GenericDAO<Devolucao> {

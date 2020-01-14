@@ -6,8 +6,8 @@ import org.junit.Test;
 
 import br.com.vendas.dao.PessoaDAO;
 import br.com.vendas.dao.UsuarioDAO;
-import br.com.vendas.domain.Pessoa;
-import br.com.vendas.domain.Usuario;
+import br.com.vendas.model.Pessoa;
+import br.com.vendas.model.Usuario;
 
 public class UsuarioDAOTest {
 	@Test

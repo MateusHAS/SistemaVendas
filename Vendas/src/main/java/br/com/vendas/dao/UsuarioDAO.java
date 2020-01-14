@@ -5,7 +5,7 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 import org.hibernate.criterion.Restrictions;
 
-import br.com.vendas.domain.Usuario;
+import br.com.vendas.model.Usuario;
 import br.com.vendas.util.HibernateUtil;
 
 public class UsuarioDAO extends GenericDAO<Usuario> {
